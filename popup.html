@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirNavX Bridge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>✈️ AirNavX Bridge</h1>
+      <p class="version">v1.0.0</p>
+    </div>
+    
+    <!-- Status Section -->
+    <div class="status-section">
+      <div class="status-indicator" id="statusIndicator">
+        <div class="status-dot" id="statusDot"></div>
+        <div class="status-text" id="statusText">Checking...</div>
+      </div>
+      
+      <div class="connection-info" id="connectionInfo" style="display: none;">
+        <div class="info-row">
+          <span class="label">Host:</span>
+          <span class="value" id="hostValue">-</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Port:</span>
+          <span class="value" id="portValue">-</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Actions -->
+    <div class="actions">
+      <button id="detectBtn" class="btn btn-primary">
+        🔍 Detect AirNavX
+      </button>
+      
+      <button id="testBtn" class="btn btn-secondary" disabled>
+        🧪 Test Connection
+      </button>
+    </div>
+    
+    <!-- Test Results -->
+    <div class="test-results" id="testResults" style="display: none;">
+      <h3>Test Results</h3>
+      <div id="testOutput"></div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <a href="options.html" target="_blank">⚙️ Settings</a>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
